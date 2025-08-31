@@ -31,3 +31,26 @@
     </div>
     
 </body>
+<script>
+    $(document).ready(function() {
+        // $(".shape").click(function(e) {
+        //     $(e.target).hide();
+        //     $("#show-all").show();
+        // });
+        // $("#show-all").click(function() {
+        //     $(".shape").show(1000, function() {
+        //         $("#show-all").hide();
+        //     });
+        // }); 
+        var sharpeCount = 0;
+        $("#add-shape").click(function() {
+            $("#output").append(`<div><span> ${++sharpeCount} </span></div>`);
+            $("#output div:last")
+                .addClass("shape")
+                .addClass($("#selected-color").val())
+                .addClass($("#selected-shape").val())
+        });
+
+    });
+</script>
+</html>
